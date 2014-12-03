@@ -5,6 +5,7 @@ public class OpenMe : MonoBehaviour {
 	
 	private Animation anim;
 	private bool isClosed = true;
+	private Inventory _inventory; // only for one player
 
 	void Start() {
 
@@ -13,6 +14,7 @@ public class OpenMe : MonoBehaviour {
 
 	// coroutine. necessary for delays
 	IEnumerator toggleDoor() {
+
 		// open door
 		anim.Play ("doorOpen");
 		isClosed = false; // register that door is open
@@ -25,11 +27,14 @@ public class OpenMe : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider col) {
-		string name = col.name.ToLower();
 
-		// if door is closed and we have the key
-		if (isClosed && name.StartsWith("player") &&
-		    	col.gameObject.GetComponent<Inventory>().key) {
+		// cache once the inventroy
+		if (_inventory == null) {
+			_inventory = col.gameObject.GetComponent<Inventory>();
+		}
+
+		// if he/she is the player, the door is closed and we have the key...
+		if (isClosed && col.name == "player" && _inventory.key) {
 			// use door
 			StartCoroutine(toggleDoor());
 		}
