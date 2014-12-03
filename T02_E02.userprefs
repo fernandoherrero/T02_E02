@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AnimationCallbacks.cs">
+    <Files>
+      <File FileName="..\..\Projects\EntregaAscensor\Assets\Scripts\Inventory.cs" Line="1" Column="1" />
+      <File FileName="..\..\Projects\EntregaAscensor\Assets\Scripts\Activate.cs" Line="1" Column="1" />
+      <File FileName="..\..\Projects\EntregaAscensor\Assets\Scripts\TakeMe.cs" Line="1" Column="1" />
+      <File FileName="..\..\Projects\EntregaAscensor\Assets\Scripts\AnimationCallbacks.cs" Line="1" Column="1" />
+      <File FileName="..\..\Projects\EntregaAscensor\Assets\Scripts\Teleport.cs" Line="1" Column="1" />
+      <File FileName="..\..\Projects\EntregaAscensor\Assets\Scripts\OpenMe.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AnimationCallbacks.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
