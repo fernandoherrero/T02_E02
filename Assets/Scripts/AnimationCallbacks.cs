@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * Holds animation callbacks for the elevator to go up and down at
+ * the right moments of the button animation
+ */
 public class AnimationCallbacks : MonoBehaviour {
 
 	private Animation animationElevator;

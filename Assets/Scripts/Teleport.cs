@@ -6,29 +6,26 @@ using System.Collections;
  */
 public class Teleport : MonoBehaviour {
 	
-	private Transform _transform; // player's tansform (works only with one)
-	[SerializeField]
-	private float pos;
-	[SerializeField]
-	private inLoop;
+	private Transform _transform; // player's tansform (works only with one player)
 
 	void OnTriggerEnter (Collider col) {
-
+		
+		Debug.Log ("Called");
+		
 		// if the player got close...
 		if (col.name == "player") {
-
+			
 			// if not cached, cache the player's transform
 			if (_transform == null) {
 				_transform = col.gameObject.GetComponent<Transform>();
 			}
 
 			// teleport to position
-			if (!inLoop) {
-				inLoop = true; // let pass once (expected to start in false then)
-			} else {
-				_transform.position  = new Vector3(
-					_transform.position.x, pos, _transform.position.z);
-			}
+			_transform.Translate(
+				0,
+				(_transform.position.y >= 3) ? -3 : 3,
+				0
+			);
 		}
 	}
 }

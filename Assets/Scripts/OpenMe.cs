@@ -13,12 +13,12 @@ public class OpenMe : MonoBehaviour {
 	}
 
 	// coroutine. necessary for delays
-	IEnumerator toggleDoor() {
+	IEnumerator ToggleDoor() {
 
 		// open door
 		anim.Play ("doorOpen");
 		isClosed = false; // register that door is open
-		yield return new WaitForSeconds (5);
+		yield return new WaitForSeconds (1.5f);
 		
 		// after a while, close the door
 		anim.Play ("doorClose");
@@ -36,7 +36,7 @@ public class OpenMe : MonoBehaviour {
 		// if he/she is the player, the door is closed and we have the key...
 		if (isClosed && col.name == "player" && _inventory.key) {
 			// use door
-			StartCoroutine(toggleDoor());
+			StartCoroutine(ToggleDoor());
 		}
 	}
 }

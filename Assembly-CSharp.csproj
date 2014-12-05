@@ -49,6 +49,7 @@
      <Compile Include="Assets\FPS Character\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Activate.cs" />
      <Compile Include="Assets\Scripts\AnimationCallbacks.cs" />
+     <Compile Include="Assets\Scripts\EnableTriggerUp.cs" />
      <Compile Include="Assets\Scripts\Inventory.cs" />
      <Compile Include="Assets\Scripts\OpenMe.cs" />
      <Compile Include="Assets\Scripts\TakeMe.cs" />
